@@ -217,6 +217,13 @@ body{
     }
 }
 
+@media screen and (max-width: 500px){
+    .section__principal{
+        width: 100%;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 334px){
     .label{
         font-size: 14px;
