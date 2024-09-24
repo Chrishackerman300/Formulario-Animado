@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --bg-main: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    --bg-form: #fff;
+    --margin: 0 auto;
+    --width: min(90%, 1200px);
+    --padding: 15px;
+    --padding-btn: 15px 10px;
+    --buttons-border-color: #d68910;
+    --buttons-border-focus-hover: slateblue;
+    --paragraph: 'Roboto', sans-serif;
+    --title: 'Poppins', sans-serif;
+    --color-icon: slateblue;
+    --color-text: #1c2833;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-main);
+    background-position: center;
+    background-size: cover;
+    font-family: var(--title);
+}
+
+.section{
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.section__container{
+    width: 50%;
+    margin: var(--margin);
+    background: var(--bg-form);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    padding: var(--padding);
+}
+
+.title__content{
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.title{
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+.title-paragraph{
+    font-size: 1rem;
+    font-family: var(--paragraph);
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.formulario{
+    width: 60%;
+    margin: var(--margin);
+}
+
+.formulario__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formulario__container{
+    width: 90%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.icon{
+    font-size: 22px;
+    color: var(--color-icon);
+}
+
+.input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: all .3s ease;
+    border-bottom: solid 2px var(--buttons-border-focus-hover);
+}
+
+.input:focus{
+    border-bottom: solid 2px var(--buttons-border-color);
+}
+
+.label{
+    font-size: 1rem;
+    color: var(--color-text);
+    position: absolute;
+    left: 40px;
+    top: 6px;
+    transition: all .3s ease;
+}
+
+.input:focus + .label, input:not(:placeholder-shown) + .label{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: var(--buttons-border-color);
+}
+
+.btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-login{
+    width: 100%;
+    padding: var(--padding-btn);
+    border: none;
+    background: var(--color-text);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    font-size: 1rem;
+    font-family: var(--paragraph);
+    font-weight: 400;
+    color: var(--bg-form);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-login:hover{
+    background: var(--buttons-border-color);
+    color: var(--color-text);
+}
+
+.section__paragraph{
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.paragraph{
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--paragraph);
+    font-weight: 400;
+}
+
+.link{
+    color: var(--buttons-border-color);
+}
+
+@media screen and (max-width: 1000px){
+    .formulario{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 760px){
+    .section{
+        margin-top: 30%;
+    }
+
+    .section__container{
+        width: var(--width);
+    }
+
+    .formulario__content{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .title{
+        font-size: 2rem;
+    }
+
+    .section__container{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .section{
+        margin-top: 40%;
+    }
+
+    .label{
+        font-size: 14px;
+    }
+}
