@@ -15,6 +15,7 @@
     --padding-page: 10px;
     --marign: 0 auto;
     --width-responsive: min(90%, 1200px);
+    --bg-login-hover: #ebab45;
 }
 
 body{
@@ -140,6 +141,25 @@ body{
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.btn-login{
+    padding: 15px 10px;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-title);
+    font-weight: 400;
+    cursor: pointer;
+    background: #1c2833;
+    color: var(--bg-form);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    transition: all .3s ease;
+}
+
+.btn-login:hover{
+    background: var(--bg-login-hover);
+    color: var(--color-text1);
 }
 
 .section__paragraph{
