@@ -34,7 +34,7 @@ body{
     width: 55%;
     height: 100%;
     background: var(--bg-form);
-    margin-top: 10%;
+    margin-top: 5%;
     padding: var(--padding-page);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
